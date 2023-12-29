@@ -1,0 +1,50 @@
+<!doctype html>
+<!-- This declaration defines this document to be HTML5 -->
+
+<html>
+    <head>
+        <!-- Meta tags are used to define metadata about the HTML document -->
+        <meta charset="utf-8">
+        <!-- This specifies the character encoding for the HTML document -->
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- The viewport is the user's visible area of a web page. 
+        This meta tag makes the webpage responsive by setting the width 
+        of the viewport to match the device's width and setting the 
+        initial zoom level -->
+
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- This script tag imports Tailwind CSS, a utility-first CSS framework -->
+
+        <title>{% block title %}{% endblock %} | Puddle</title>
+        <!-- Defines the title of the document, shown in the browser's title bar or in the page's tab -->
+
+    </head>
+    <body>
+        <!-- Body tag contains the content of the HTML document -->
+        <nav class ="py-6 px-6 flex justify-between items-center border-b border-gray-200">
+            <a hrerf="/" class = "text-xl font-semibold">Puddle</a>
+            
+            <div class = "space-x-6">
+                <a href="#" class = "text-lg font-semibold hover:text-gray-500">New Item</a>
+                <a href="#" class = "text-lg font-semibold hover:text-gray-500">Browse</a>
+
+                <a href="#" class = "px-6 py-3 text-lg font-semibold bg-teal-500 text-white rounded-xl hover:bg-teal-700">Sign up</a>
+                <a href="#" class = "px-6 py-3 text-lg font-semibold bg-gray-500 text-white rounded-xl hover:bg-gray-700">Login</a>
+            </div>
+        </nav>
+        <div class="px-6 py-6">
+            <!-- Div tag is used as a container for HTML elements.
+            'px-6 py-6' are Tailwind CSS classes for padding. 
+            'px-6' sets horizontal padding and 'py-6' sets vertical padding -->
+            {% block content %} <!-- codeblock--> 
+            {% endblock %}
+        </div>
+
+        <footer class = "py-6 px-6 flex justify-between bg-gray-800">
+            <div class = "w-2/3 pr-10">
+                <h3 class="mb-5 font-semibold text-gray-400">About</h3>
+            </div>
+        </footer>
+    </body>
+</html>
