@@ -21,30 +21,73 @@
 
     </head>
     <body>
-        <!-- Body tag contains the content of the HTML document -->
-        <nav class ="py-6 px-6 flex justify-between items-center border-b border-gray-200">
-            <a hrerf="/" class = "text-xl font-semibold">Puddle</a>
-            
-            <div class = "space-x-6">
-                <a href="#" class = "text-lg font-semibold hover:text-gray-500">New Item</a>
-                <a href="#" class = "text-lg font-semibold hover:text-gray-500">Browse</a>
-
-                <a href="#" class = "px-6 py-3 text-lg font-semibold bg-teal-500 text-white rounded-xl hover:bg-teal-700">Sign up</a>
-                <a href="#" class = "px-6 py-3 text-lg font-semibold bg-gray-500 text-white rounded-xl hover:bg-gray-700">Login</a>
+        <!-- The body tag contains the content of the HTML document -->
+    
+        <nav class="py-6 px-6 flex justify-between items-center border-b border-gray-200">
+            <!-- Navigation bar with Tailwind CSS classes for styling:
+                - py-6 and px-6: Padding
+                - flex: Enables flexbox layout
+                - justify-between: Space between items is distributed equally
+                - items-center: Aligns items vertically at the center
+                - border-b and border-gray-200: Bottom border with a specific gray color
+            -->
+    
+            <a href="/" class="text-xl font-semibold">Puddle</a>
+            <!-- Link to the home page with styling for larger, bold text -->
+    
+            <div class="space-x-6">
+                <!-- Container for navigation links with horizontal spacing -->
+                
+                <!-- Individual navigation links with hover effects and styling -->
+                <a href="#" class="text-lg font-semibold hover:text-gray-500">New Item</a>
+                <a href="#" class="text-lg font-semibold hover:text-gray-500">Browse</a>
+    
+                <!-- Sign up and Login buttons with distinctive styling and hover effects -->
+                <a href="#" class="px-6 py-3 text-lg font-semibold bg-teal-500 text-white rounded-xl hover:bg-teal-700">Sign up</a>
+                <a href="#" class="px-6 py-3 text-lg font-semibold bg-gray-500 text-white rounded-xl hover:bg-gray-700">Login</a>
             </div>
         </nav>
+    
         <div class="px-6 py-6">
-            <!-- Div tag is used as a container for HTML elements.
-            'px-6 py-6' are Tailwind CSS classes for padding. 
-            'px-6' sets horizontal padding and 'py-6' sets vertical padding -->
-            {% block content %} <!-- codeblock--> 
+            <!-- Main content area with padding -->
+            
+            {% block content %} <!-- Django template tag for content blocks -->
+            <!-- This is a placeholder where different content can be inserted in different pages -->
             {% endblock %}
         </div>
-
-        <footer class = "py-6 px-6 flex justify-between bg-gray-800">
-            <div class = "w-2/3 pr-10">
+    
+        <footer class="py-6 px-6 flex justify-between bg-gray-800">
+            <!-- Footer with Tailwind CSS classes for styling:
+                - py-6 and px-6: Padding
+                - flex: Enables flexbox layout
+                - justify-between: Space between items is distributed equally
+                - bg-gray-800: Background color
+            -->
+    
+            <div class="w-2/3 pr-10">
+                <!-- Container for the 'About' section, taking two-thirds of the available width and with right padding -->
                 <h3 class="mb-5 font-semibold text-gray-400">About</h3>
+                <!-- About heading with styling -->
+    
+                <p class="text-lg text-gray-500">
+                    <!-- About text -->
+                    Its about time to Its about Its about Its about Its about Its about Its about and Its about
+                </p>
+            </div>
+    
+            <div class="w-1/3">
+                <!-- Container for the 'Menu' section, taking one-third of the available width -->
+                <h3 class="mb-5 font-semibold text-gray-400">Menu</h3>
+                <!-- Menu heading with styling -->
+    
+                <ul class="space-y-2">
+                    <!-- Unordered list for menu items with vertical spacing -->
+                    <li><a href="#" class="text-lg text-teal-500 hover:text-teal-700">About</a></li>
+                    <li><a href="{% url 'contact' %}" class="text-lg text-teal-500 hover:text-teal-700">Contact</a></li>
+                    <li><a href="#" class="text-lg text-teal-500 hover:text-teal-700">Privacy Policy</a></li>
+                    <li><a href="#" class="text-lg text-teal-500 hover:text-teal-700">Terms</a></li>
+                </ul>
             </div>
         </footer>
     </body>
-</html>
+    
